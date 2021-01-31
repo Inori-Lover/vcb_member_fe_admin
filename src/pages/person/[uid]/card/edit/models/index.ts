@@ -2,12 +2,12 @@ import { message } from 'antd';
 import { history } from 'umi';
 import { Modal } from 'antd';
 
-import type { UserCard } from '@/utils/types/UserCard';
+import type { UserCard } from '@/types/user-card';
 import { AppModel, State as AppState } from '@/models/app';
 import { PersonModel, State as PersonState } from '@/models/person';
-import { GO_BOOL } from '@/utils/types';
+import { BOOLEAN } from '@/types/golang-boolean';
 import { PrivateSymbol } from '@/utils/model-creator/util';
-import { Services } from '@/utils/services';
+import { Services } from '@/services';
 import { ModelAdapter } from '@/utils/model-adapter';
 import { modelCreator } from '@/utils/model-creator';
 
@@ -24,14 +24,14 @@ const initalState: State = {
     card: {
       key: '',
       id: '',
-      retired: GO_BOOL.no,
+      retired: BOOLEAN.no,
       order: 0,
       avast: '',
       originAvast: '',
       bio: '',
       nickname: '',
       job: '',
-      hide: GO_BOOL.no,
+      hide: BOOLEAN.no,
       group: [],
       uid: '',
 
@@ -55,7 +55,7 @@ const { model, actions, globalActions, utils, ...helpers } = modelCreator({
       try {
         const param: Services.CardList.ReadParam = {
           id,
-          includeHide: GO_BOOL.yes,
+          includeHide: BOOLEAN.yes,
         };
         const { person, g } = yield all({
           person: call(Services.CardList.read, param),

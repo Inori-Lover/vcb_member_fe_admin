@@ -12,7 +12,7 @@ import { Form, Input, Button, Select, Avatar } from 'antd';
 import classnames from 'classnames';
 
 import { UsersModel } from '@/models/users';
-import { User } from '@/utils/types/User';
+import { User } from '@/types/user';
 import { MAGIC } from '@/utils/constant';
 import { loginStore } from './model';
 

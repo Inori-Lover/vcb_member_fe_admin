@@ -1,4 +1,4 @@
-import { Pagination, initalPagination } from './Pagination';
+import { Pagination, initalPagination } from './t-pagination';
 
 export interface CommonList<T extends any> {
   data: T[];

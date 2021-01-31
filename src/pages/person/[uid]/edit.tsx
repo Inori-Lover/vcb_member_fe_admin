@@ -7,7 +7,7 @@ import { defaultFormLayout } from '@/utils/constant';
 
 import { PageParam } from './types';
 
-import { PersonInfo } from '@/utils/types/PersonInfo';
+import { PersonInfo } from '@/types/person-info';
 import { PersonModel } from '@/models/person';
 
 import styles from './edit.scss';

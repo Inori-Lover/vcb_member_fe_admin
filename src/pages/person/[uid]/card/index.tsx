@@ -3,9 +3,9 @@ import { useParams, history, useDispatch } from 'umi';
 import { Typography, Table, Avatar, Button, Tag, Space, Modal } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
 
-import { GO_BOOL } from '@/utils/types';
-import { Group } from '@/utils/types/Group';
-import { UserCard } from '@/utils/types/UserCard';
+import { BOOLEAN } from '@/types/golang-boolean';
+import { Group } from '@/types/group';
+import { UserCard } from '@/types/user-card';
 import { PersonModel } from '@/models/person';
 
 import { PageParam } from '../types';
@@ -108,11 +108,11 @@ const PagePersonCard: FC = function PagePersonCard() {
         align: 'center',
         render: (item: UserCard.Item) => (
           <Space>
-            <Tag.CheckableTag checked={item.hide === GO_BOOL.no}>
-              {item.hide === GO_BOOL.no ? '可见' : '隐藏'}
+            <Tag.CheckableTag checked={item.hide === BOOLEAN.no}>
+              {item.hide === BOOLEAN.no ? '可见' : '隐藏'}
             </Tag.CheckableTag>
-            <Tag.CheckableTag checked={item.retired === GO_BOOL.no}>
-              {item.retired === GO_BOOL.no ? '活跃中' : '退休'}
+            <Tag.CheckableTag checked={item.retired === BOOLEAN.no}>
+              {item.retired === BOOLEAN.no ? '活跃中' : '退休'}
             </Tag.CheckableTag>
           </Space>
         ),

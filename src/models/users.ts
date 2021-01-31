@@ -1,11 +1,11 @@
 import { message } from 'antd';
 
 import { AppModel, State as AppState } from '@/models/app';
-import type { CommonList } from '@/utils/types/CommonList';
-import type { User } from '@/utils/types/User';
-import type { Group } from '@/utils/types/Group';
-import { Services } from '@/utils/services';
-import { emptyList } from '@/utils/types/CommonList';
+import type { CommonList } from '@/types/common-list';
+import type { User } from '@/types/user';
+import type { Group } from '@/types/group';
+import { Services } from '@/services';
+import { emptyList } from '@/types/common-list';
 import { ModelAdapter } from '@/utils/model-adapter';
 import { modelCreator } from '@/utils/model-creator';
 

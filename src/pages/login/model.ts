@@ -3,7 +3,7 @@ import { history } from 'umi';
 import { EffectsCommandMap } from 'dva';
 import { parse } from 'query-string';
 
-import { Services } from '@/utils/services';
+import { Services } from '@/services';
 import { MAGIC } from '@/utils/constant';
 import { token } from '@/utils/token';
 import { modelCreator } from '@/utils/model-creator';

@@ -19,8 +19,8 @@ import { GroupSelector } from '@/components/group-selector';
 import { PersonModel } from '@/models/person';
 
 import { PageParam } from './types';
-import { GO_BOOL } from '@/utils/types';
-import { Group } from '@/utils/types/Group';
+import { BOOLEAN } from '@/types/golang-boolean';
+import { Group } from '@/types/group';
 
 import { PersonCardEditModel } from './models';
 import styles from './[editID].scss';
@@ -196,7 +196,7 @@ export default function PagePerson() {
         PersonCardEditModel.utils.fieldPayloadCreator(
           'card',
           'retired',
-          checked ? GO_BOOL.yes : GO_BOOL.no,
+          checked ? BOOLEAN.yes : BOOLEAN.no,
         ),
       );
     },
@@ -211,7 +211,7 @@ export default function PagePerson() {
         PersonCardEditModel.utils.fieldPayloadCreator(
           'card',
           'hide',
-          checked ? GO_BOOL.yes : GO_BOOL.no,
+          checked ? BOOLEAN.yes : BOOLEAN.no,
         ),
       );
     },
@@ -291,7 +291,7 @@ export default function PagePerson() {
         >
           <Switch
             loading={formLoading}
-            checked={form.retired === GO_BOOL.yes}
+            checked={form.retired === BOOLEAN.yes}
             checkedChildren={yesIcon}
             unCheckedChildren={noIcon}
             onChange={retiredChangeHandle}
@@ -302,12 +302,12 @@ export default function PagePerson() {
           label='隐藏'
           help='隐藏后将不会被展示在前台'
           className={classnames(
-            form.hide === GO_BOOL.yes && styles.heightLightHelper,
+            form.hide === BOOLEAN.yes && styles.heightLightHelper,
           )}
         >
           <Switch
             loading={formLoading}
-            checked={form.hide === GO_BOOL.yes}
+            checked={form.hide === BOOLEAN.yes}
             checkedChildren={yesIcon}
             unCheckedChildren={noIcon}
             onChange={hideChangeHandle}

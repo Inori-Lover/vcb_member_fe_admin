@@ -1,4 +1,4 @@
-import type { UserCard } from '@/utils/types/UserCard';
+import type { UserCard } from '@/types/user-card';
 
 export const namespace = 'pages.person.card.edit';
 export enum ActionType {

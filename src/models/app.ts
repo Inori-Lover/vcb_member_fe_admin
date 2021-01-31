@@ -1,9 +1,9 @@
 import { message } from 'antd';
 
-import type { Group } from '@/utils/types/Group';
-import type { UserCard } from '@/utils/types/UserCard';
-import { emptyList } from '@/utils/types/CommonList';
-import { Services } from '@/utils/services';
+import type { Group } from '@/types/group';
+import type { UserCard } from '@/types/user-card';
+import { emptyList } from '@/types/common-list';
+import { Services } from '@/services';
 
 import { modelCreator } from '@/utils/model-creator';
 

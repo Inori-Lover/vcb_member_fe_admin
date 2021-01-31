@@ -1,7 +1,7 @@
-import type { Group } from '@/utils/types/Group';
-import type { User } from '@/utils/types/User';
-import type { UserCard } from '@/utils/types/UserCard';
-import type { PersonInfo } from '@/utils/types/PersonInfo';
+import type { Group } from '@/types/group';
+import type { User } from '@/types/user';
+import type { UserCard } from '@/types/user-card';
+import type { PersonInfo } from '@/types/person-info';
 
 const unknowGroup: Group.Item = {
   id: '',

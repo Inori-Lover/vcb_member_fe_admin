@@ -1,4 +1,4 @@
-import { CommonList } from './CommonList';
+import { CommonList } from '../common-list';
 export namespace Group {
   export interface ItemInResponse {
     id: number;

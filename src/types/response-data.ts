@@ -1,4 +1,4 @@
-export namespace ResponseData {
+export namespace Response {
   export interface Base<T extends Record<string, any> | undefined = any> {
     code: number;
     data?: T;

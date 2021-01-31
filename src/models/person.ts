@@ -4,14 +4,14 @@ import { createPath } from 'history';
 import { stringify } from 'query-string';
 
 import { AppModel, State as AppModelState } from '@/models/app';
-import { GO_BOOL } from '@/utils/types';
-import type { CommonList } from '@/utils/types/CommonList';
-import type { UserCard } from '@/utils/types/UserCard';
-import type { PersonInfo } from '@/utils/types/PersonInfo';
-import type { Group } from '@/utils/types/Group';
-import type { User } from '@/utils/types/User';
-import { Services } from '@/utils/services';
-import { emptyList } from '@/utils/types/CommonList';
+import { BOOLEAN } from '@/types/golang-boolean';
+import type { CommonList } from '@/types/common-list';
+import type { UserCard } from '@/types/user-card';
+import type { PersonInfo } from '@/types/person-info';
+import type { Group } from '@/types/group';
+import type { User } from '@/types/user';
+import { Services } from '@/services';
+import { emptyList } from '@/types/common-list';
 import { ModelAdapter } from '@/utils/model-adapter';
 import { token } from '@/utils/token';
 import { MAGIC } from '@/utils/constant';
@@ -43,7 +43,7 @@ const initalState: State = {
     originAvast: '',
     admin: [],
     group: [],
-    ban: GO_BOOL.no,
+    ban: BOOLEAN.no,
   },
   cardList: emptyList,
   userList: emptyList,

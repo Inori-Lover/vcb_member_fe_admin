@@ -35,18 +35,18 @@ import { ColumnsType } from 'antd/lib/table';
 
 import { UsersModel } from '@/models/users';
 import { PersonModel } from '@/models/person';
-import { Services } from '@/utils/services';
-import { GO_BOOL } from '@/utils/types';
-import { Group } from '@/utils/types/Group';
-import { PersonInfo } from '@/utils/types/PersonInfo';
-import { User } from '@/utils/types/User';
+import { Services } from '@/services';
+import { BOOLEAN } from '@/types/golang-boolean';
+import { Group } from '@/types/group';
+import { PersonInfo } from '@/types/person-info';
+import { User } from '@/types/user';
 import { PageParam } from '@/pages/person/[uid]/types';
 import { GroupSelector } from '@/components/group-selector';
 import { RestPass } from '@/components/rest-pass';
 import { useBoolean } from '@/utils/hooks/useBoolean';
 import { AppModel } from '@/models/app';
 import { ModelAdapter } from '@/utils/model-adapter';
-import { UserCard } from '@/utils/types/UserCard';
+import * as UserCard from '@/types/user-card';
 
 import styles from './index.scss';
 
@@ -322,7 +322,7 @@ const CardSubTable: FC<CardSubTableProps> = memo(function CardSubTable({
     const query = async () => {
       const param: Services.CardList.ReadParam = {
         uid,
-        includeHide: GO_BOOL.yes,
+        includeHide: BOOLEAN.yes,
       };
       loadingAction.setTrue();
 
@@ -361,7 +361,7 @@ const CardSubTable: FC<CardSubTableProps> = memo(function CardSubTable({
       const currentID = componentID.current;
       const params: Services.CardList.UpdateParam = {
         id: card.id,
-        hide: card.hide === GO_BOOL.yes ? GO_BOOL.no : GO_BOOL.yes,
+        hide: card.hide === BOOLEAN.yes ? BOOLEAN.no : BOOLEAN.yes,
       };
 
       try {
@@ -369,7 +369,7 @@ const CardSubTable: FC<CardSubTableProps> = memo(function CardSubTable({
           const { destroy } = Modal.confirm({
             centered: true,
             title: `切换${card.nickname}的显隐状态为: ${
-              params.hide! === GO_BOOL.yes ? '显示' : '隐藏'
+              params.hide! === BOOLEAN.yes ? '显示' : '隐藏'
             }`,
             onOk: () => {
               destroy();
@@ -416,7 +416,7 @@ const CardSubTable: FC<CardSubTableProps> = memo(function CardSubTable({
       const currentID = componentID.current;
       const params: Services.CardList.UpdateParam = {
         id: card.id,
-        retired: card.retired === GO_BOOL.yes ? GO_BOOL.no : GO_BOOL.yes,
+        retired: card.retired === BOOLEAN.yes ? BOOLEAN.no : BOOLEAN.yes,
       };
 
       try {
@@ -424,7 +424,7 @@ const CardSubTable: FC<CardSubTableProps> = memo(function CardSubTable({
           const { destroy } = Modal.confirm({
             centered: true,
             title: `切换${card.nickname}的退休状态为: ${
-              params.retired! === GO_BOOL.yes ? '已退休' : '活跃中'
+              params.retired! === BOOLEAN.yes ? '已退休' : '活跃中'
             }`,
             onOk: () => {
               destroy();
@@ -485,7 +485,7 @@ const CardSubTable: FC<CardSubTableProps> = memo(function CardSubTable({
           return (
             <Space>
               <Switch
-                checked={card.retired === GO_BOOL.no}
+                checked={card.retired === BOOLEAN.no}
                 checkedChildren='活跃'
                 unCheckedChildren='咸鱼'
                 title='切换退休状态'
@@ -493,7 +493,7 @@ const CardSubTable: FC<CardSubTableProps> = memo(function CardSubTable({
                 loading={loadingCardID === card.id}
               />
               <Switch
-                checked={card.hide === GO_BOOL.no}
+                checked={card.hide === BOOLEAN.no}
                 checkedChildren='kirakira!'
                 unCheckedChildren='已隐藏'
                 title='切换卡片前台显隐状态'
@@ -551,7 +551,7 @@ export default function PagePerson() {
         </>
       );
 
-      if (ban === GO_BOOL.yes) {
+      if (ban === BOOLEAN.yes) {
         okText = '解封';
         content = '解封后用户可以正常登录，展示列表也会恢复展示';
       }
@@ -564,7 +564,7 @@ export default function PagePerson() {
         onOk: () => {
           PersonModel.dispatch.updatePersonInfo(dispatch, {
             id: uid,
-            ban: ban === GO_BOOL.yes ? GO_BOOL.no : GO_BOOL.yes,
+            ban: ban === BOOLEAN.yes ? BOOLEAN.no : BOOLEAN.yes,
           });
         },
       });
@@ -700,7 +700,7 @@ export default function PagePerson() {
         render: (item: PersonInfo.Item) => (
           <Space>
             {/* <NormalTag title={!!item.admin.length ? '组长' : '组员'} /> */}
-            {item.ban === GO_BOOL.yes ? (
+            {item.ban === BOOLEAN.yes ? (
               <ErrorTag title='封禁' />
             ) : (
               <NormalTag title='可登录' />
@@ -752,7 +752,7 @@ export default function PagePerson() {
                 </Button>
               </Dropdown>
 
-              {person.ban === GO_BOOL.yes ? (
+              {person.ban === BOOLEAN.yes ? (
                 <Button
                   ghost
                   type='primary'

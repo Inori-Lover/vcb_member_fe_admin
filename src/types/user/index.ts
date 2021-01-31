@@ -1,12 +1,12 @@
-import { Group } from './Group';
-import { GO_BOOL } from './index';
-import { CommonList } from './CommonList';
+import { Group } from '../group';
+import { BOOLEAN } from '../golang-boolean';
+import { CommonList } from '../common-list';
 export namespace User {
   export interface ItemInResponse {
     id: string;
     // 逗号分隔
     admin: string;
-    ban: GO_BOOL;
+    ban: BOOLEAN;
     avast: string;
     nickname: string;
     // 逗号分隔

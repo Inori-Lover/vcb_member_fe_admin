@@ -1,4 +1,4 @@
-export enum GO_BOOL {
+export enum BOOLEAN {
   yes = 1,
   no = 2,
 }
