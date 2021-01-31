@@ -3,9 +3,9 @@ import { EffectsCommandMap } from 'dva';
 import {
   ExtractPayloadFromAction,
   ACTION_IS_UNDEFINED,
-} from '../ExtractPayloadFromAction';
+} from '../extract-payload-from-action';
 
-import { MayBeGlobalAction } from '../MayBeGlobalAction';
+import { MayBeGlobalAction } from '../may-be-global-action';
 
 export type SagaConvertor<Effects, N, JUST_FOR_VS_CODE_COLOR = any> = {
   [K in keyof Effects]: Effects[K] extends (

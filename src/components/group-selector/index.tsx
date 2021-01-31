@@ -11,7 +11,7 @@ import { Select } from 'antd';
 
 import { AppModel } from '@/models/app';
 import { PersonModel } from '@/models/person';
-import { groupAdapter } from '@/utils/modelAdapter';
+import { groupAdapter } from '@/utils/model-adapter';
 import { Group } from '@/utils/types/Group';
 
 interface Props {

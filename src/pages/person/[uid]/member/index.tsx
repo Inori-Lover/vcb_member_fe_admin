@@ -41,11 +41,11 @@ import { Group } from '@/utils/types/Group';
 import { PersonInfo } from '@/utils/types/PersonInfo';
 import { User } from '@/utils/types/User';
 import { PageParam } from '@/pages/person/[uid]/types';
-import { GroupSelector } from '@/components/GroupSelector';
+import { GroupSelector } from '@/components/group-selector';
 import { RestPass } from '@/components/rest-pass';
 import { useBoolean } from '@/utils/hooks/useBoolean';
 import { AppModel } from '@/models/app';
-import { ModelAdapter } from '@/utils/modelAdapter';
+import { ModelAdapter } from '@/utils/model-adapter';
 import { UserCard } from '@/utils/types/UserCard';
 
 import styles from './index.scss';

@@ -6,10 +6,10 @@ import type { UserCard } from '@/utils/types/UserCard';
 import { AppModel, State as AppState } from '@/models/app';
 import { PersonModel, State as PersonState } from '@/models/person';
 import { GO_BOOL } from '@/utils/types';
-import { PrivateSymbol } from '@/utils/modelCreator/util';
+import { PrivateSymbol } from '@/utils/model-creator/util';
 import { Services } from '@/utils/services';
-import { ModelAdapter } from '@/utils/modelAdapter';
-import { modelCreator } from '@/utils/modelCreator';
+import { ModelAdapter } from '@/utils/model-adapter';
+import { modelCreator } from '@/utils/model-creator';
 
 export interface State {
   form: {

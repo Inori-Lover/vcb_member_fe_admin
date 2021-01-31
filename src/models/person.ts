@@ -12,10 +12,10 @@ import type { Group } from '@/utils/types/Group';
 import type { User } from '@/utils/types/User';
 import { Services } from '@/utils/services';
 import { emptyList } from '@/utils/types/CommonList';
-import { ModelAdapter } from '@/utils/modelAdapter';
+import { ModelAdapter } from '@/utils/model-adapter';
 import { token } from '@/utils/token';
 import { MAGIC } from '@/utils/constant';
-import { modelCreator } from '@/utils/modelCreator';
+import { modelCreator } from '@/utils/model-creator';
 
 export interface State {
   /** 用户信息 */

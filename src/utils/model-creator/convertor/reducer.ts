@@ -1,9 +1,9 @@
 import {
   ExtractPayloadFromAction,
   ACTION_IS_UNDEFINED,
-} from '../ExtractPayloadFromAction';
+} from '../extract-payload-from-action';
 
-import { MayBeGlobalAction } from '../MayBeGlobalAction';
+import { MayBeGlobalAction } from '../may-be-global-action';
 
 export type ReducerConvertor<Reducers, N, S = any> = {
   [K in keyof Reducers]: Reducers[K] extends (

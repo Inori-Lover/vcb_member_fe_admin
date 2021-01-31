@@ -6,8 +6,8 @@ import { parse } from 'query-string';
 import { Services } from '@/utils/services';
 import { MAGIC } from '@/utils/constant';
 import { token } from '@/utils/token';
-import { modelCreator } from '@/utils/modelCreator';
-import { PrivateSymbol } from '@/utils/modelCreator/util';
+import { modelCreator } from '@/utils/model-creator';
+import { PrivateSymbol } from '@/utils/model-creator/util';
 
 export const namespace = 'pages.login';
 

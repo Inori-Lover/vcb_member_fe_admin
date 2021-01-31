@@ -1,6 +1,6 @@
 import { ErrorShowType } from 'umi';
 
-import { httpStatusCodeErrMessage } from './httpStatusCodeErrMessage';
+import { httpStatusCodeErrMessage } from './messages';
 import { Context } from 'umi-request';
 
 // copy from import { RequestConfig } from 'umi'

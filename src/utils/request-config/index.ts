@@ -1,8 +1,8 @@
 import type { RequestConfig } from 'umi';
 
-import * as requestInterceptors from './requestInterceptors';
-import * as responseInterceptors from './responseInterceptors';
-import * as responseAdaptor from './responseAdaptor';
+import * as requestInterceptors from './request-interceptors';
+import * as responseInterceptors from './response-interceptors';
+import * as responseAdaptor from './response-adaptor';
 
 export const config: RequestConfig = {
   prefix: '/vcbs_member_api',

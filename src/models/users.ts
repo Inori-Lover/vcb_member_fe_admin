@@ -6,8 +6,8 @@ import type { User } from '@/utils/types/User';
 import type { Group } from '@/utils/types/Group';
 import { Services } from '@/utils/services';
 import { emptyList } from '@/utils/types/CommonList';
-import { ModelAdapter } from '@/utils/modelAdapter';
-import { modelCreator } from '@/utils/modelCreator';
+import { ModelAdapter } from '@/utils/model-adapter';
+import { modelCreator } from '@/utils/model-creator';
 
 export interface State {
   /** 管理组员信息 */

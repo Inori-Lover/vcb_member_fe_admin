@@ -2,7 +2,7 @@ import { FC, createElement } from 'react';
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
 
-import poyfill from '@/utils/asyncPoyfill';
+import poyfill from '@/utils/async-poyfill';
 
 export function render(oldRender: () => any) {
   poyfill().then(() => {
@@ -18,4 +18,4 @@ export function rootContainer(container: any) {
   return createElement(Root, null, container);
 }
 
-export { config as request } from '@/utils/requestConfig';
+export { config as request } from '@/utils/request-config';

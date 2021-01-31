@@ -5,7 +5,7 @@ import type { UserCard } from '@/utils/types/UserCard';
 import { emptyList } from '@/utils/types/CommonList';
 import { Services } from '@/utils/services';
 
-import { modelCreator } from '@/utils/modelCreator';
+import { modelCreator } from '@/utils/model-creator';
 
 const namespace = 'global.app';
 

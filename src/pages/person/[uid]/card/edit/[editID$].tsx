@@ -15,7 +15,7 @@ import {
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 
 import { defaultFormLayout, textareaAutoSize } from '@/utils/constant';
-import { GroupSelector } from '@/components/GroupSelector';
+import { GroupSelector } from '@/components/group-selector';
 import { PersonModel } from '@/models/person';
 
 import { PageParam } from './types';

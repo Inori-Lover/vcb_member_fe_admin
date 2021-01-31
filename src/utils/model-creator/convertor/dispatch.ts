@@ -3,7 +3,7 @@ import { EffectsCommandMap } from 'dva';
 import {
   ExtractPayloadFromAction,
   ACTION_IS_UNDEFINED,
-} from '../ExtractPayloadFromAction';
+} from '../extract-payload-from-action';
 
 export type DispatchConvertorForSaga<Effects> = {
   [K in keyof Effects]: Effects[K] extends (
