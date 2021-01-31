@@ -6,5 +6,9 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
-  "rules": {}
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-throw-literal": "warn",
+    "no-useless-rename": "warn"
+  }
 }
